@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -16,19 +15,24 @@ struct FICHA_DE_CADASTRO
     char NOME[50], CARGO[50];
     float VALOR_HORA;
 
-};
+}FUNCIONARIOS[50];
 
 void CADASTRARFUNCIONARIO()
 {
-//struct FICHA_DE_CADASTRO fichaCadastro
+    struct FICHA_DE_CADASTRO fichaCadastro;
+    printf("Digite o nome do funcionario: ");
+    gets(FUNCIONARIOS[ID].NOME);
 }
 
 void EDITARFUNCIONARIO()
 {
 }
 
-void EXIBIRFUNCIONARIO()
+void EXIBIRFUNCIONARIOS()
 {
+ for(int i=0;i>50;i++){
+     printf("Funcionario: %s\n",FUNCIONARIOS.NOME);
+ }
 }
 
 int main()
@@ -39,7 +43,7 @@ int main()
 
     printf("Cadastro de Funcionarios\n");
     printf("Digite uma opcao:\n");
-    printf("1 - Cadastrar Novo Funcionario\n2 - Editar Funcionario\n3 - Exibir Funcionarios\n4 - Sair");
+    printf("1 - Cadastrar Novo Funcionario\n2 - Editar Funcionario\n3 - Exibir Funcionarios\n4 - Sair\n");
     scanf("%d",&OPCAO);
 
 
@@ -51,7 +55,7 @@ int main()
             printf("Parabens");
             break;
         case 2:
-            EDITARFUNCIONARIO();
+            EDITARFUNCIONARIOS();
             break;
         case 3:
             EXIBIRFUNCIONARIO();
@@ -69,4 +73,3 @@ int main()
     system("pause");
     return 0;
 }
-
